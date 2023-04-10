@@ -98,7 +98,7 @@
 // 				// is already seen, one to
 // 				// one mapping not possible
 // 				if (marked[str2[i].charCodeAt()] == true)
-// 					return false;
+// 					return false; 
 
 // 				// Mark current character of
 // 				// str2 as visited
@@ -153,7 +153,7 @@ function knapsac (capacity, array) {
   arr = []
 
   for (let i = 0; i <= n; i++) {
-    if (total_weight <= capacity) {
+    if (total_weight < capacity) {
       total_weight += obj[i].weight
       total_value += obj[i].value
       arr.push(obj[i])
@@ -163,7 +163,7 @@ function knapsac (capacity, array) {
   return {number_of_iterms, total_value, total_weight, arr}
   
 }
-console.log(knapsac(3000))
+console.log(knapsac(2000))
 
 
 
